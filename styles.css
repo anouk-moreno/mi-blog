@@ -49,7 +49,7 @@ footer {
     bottom: 0;
 }
 
-/* Estilos para las filas de películas con scroll horizontal */
+/* 🔹 Estil per a les files de pel·lícules amb scroll horitzontal */
 .peliculas-row {
     margin-bottom: 30px;
 }
@@ -64,6 +64,7 @@ footer {
     scrollbar-color: #bbb #eee;
 }
 
+/* 🔹 Modificat perquè tota la pel·lícula sigui clicable */
 .pelicula {
     flex: 0 0 auto;
     width: 200px;
@@ -73,8 +74,21 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     scroll-snap-align: start;
+    transition: transform 0.2s ease-in-out;
 }
 
+/* 🔹 Fa que l’enllaç sigui tota la pel·lícula */
+.pelicula a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.pelicula:hover {
+    transform: scale(1.05); /* Petita animació en passar el ratolí */
+}
+
+/* 🔹 Estil per a la imatge */
 .pelicula img {
     width: 100%;
     height: 250px;
@@ -82,31 +96,13 @@ footer {
     border-radius: 10px;
 }
 
+/* 🔹 Estil per al títol */
 .pelicula h3 {
     margin: 10px 0;
     font-size: 1.2em;
 }
 
-.pelicula p {
-    font-size: 1.1em;
-    color: #555;
-}
-
-.pelicula a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 12px;
-    background: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.pelicula a:hover {
-    background: #555;
-}
-
-/* Para mejorar el desplazamiento horizontal */
+/* 🔹 Per millorar el desplaçament horitzontal */
 .peliculas-scroll::-webkit-scrollbar {
     height: 8px;
 }
