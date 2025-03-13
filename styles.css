@@ -28,7 +28,7 @@ nav ul li a {
 }
 
 main {
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
     padding: 20px;
     background: white;
@@ -44,29 +44,40 @@ footer {
     padding: 10px;
     background: #333;
     color: white;
-    position: fixed;
+    position: relative;
     width: 100%;
     bottom: 0;
 }
 
-.peliculas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+/* Estilos para las filas de películas con scroll horizontal */
+.peliculas-row {
+    margin-bottom: 30px;
+}
+
+.peliculas-scroll {
+    display: flex;
+    overflow-x: auto;
     gap: 20px;
-    padding: 20px;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: #bbb #eee;
 }
 
 .pelicula {
+    flex: 0 0 auto;
+    width: 200px;
     background: #fff;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    scroll-snap-align: start;
 }
 
 .pelicula img {
     width: 100%;
-    height: 300px; /* Ajusta según el tamaño de las imágenes */
+    height: 250px;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -93,4 +104,18 @@ footer {
 
 .pelicula a:hover {
     background: #555;
+}
+
+/* Para mejorar el desplazamiento horizontal */
+.peliculas-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.peliculas-scroll::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 10px;
+}
+
+.peliculas-scroll::-webkit-scrollbar-track {
+    background: #eee;
 }
