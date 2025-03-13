@@ -5,24 +5,26 @@ body {
     background-color: #f4f4f4;
 }
 
-.custom-header {
-    width: 100%;
-    height: 300px; /* Ajusta la altura según prefieras */
-    background-image: url("img/header.jpg"); /* Imagen de fondo */
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+header {
+    background-color: #333;
+    color: white;
     text-align: center;
+    padding: 20px;
 }
 
-.custom-header h1 {
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
     color: white;
-    font-size: 2.5em;
-    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la visibilidad del texto */
-    padding: 10px 20px;
-    border-radius: 10px;
+    text-decoration: none;
 }
 
 main {
@@ -35,6 +37,16 @@ main {
 h2 {
     border-bottom: 2px solid #333;
     padding-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+    position: relative;
+    width: 100%;
+    bottom: 0;
 }
 
 /* Estilos para las filas de películas con scroll horizontal */

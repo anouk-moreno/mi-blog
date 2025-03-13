@@ -7,22 +7,62 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="custom-header">
+    <header>
         <h1>Mi Blog Personal</h1>
-    </div>
-
-    <main>
         <nav>
             <ul>
-                <li><a href="recomendaciones.html">Recomendaciones 2025</a></li>
-                <li><a href="libros.html">Libros 2025</a></li>
-                <li><a href="peliculas.html">Películas 2025</a></li>
-                <li><a href="admiro.html">Personas que admiro</a></li>
-                <li><a href="diario.html">Diario de la desesperación</a></li>
-                <li><a href="otros.html">Un poco de todo</a></li>
-                <li><a href="contacto.html">Contacto personal</a></li>
+                <li><a href="#recomendaciones">Recomendaciones</a></li>
+                <li><a href="#libros">Libros de este año</a></li>
+                <li><a href="#pelis">Películas de este año</a></li>
+                <li><a href="#admiro">Personas a las que admiro</a></li>
+                <li><a href="#diario">Diario de la desesperación</a></li>
+                <li><a href="#otros">Otros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
+    </header>
+    
+    <main>
+        <section id="recomendaciones">
+            <h2>Recomendaciones</h2>
+            <div id="posts-recomendaciones"></div>
+        </section>
+
+        <section id="libros">
+            <h2>Libros que he leído este año</h2>
+            <div id="posts-libros"></div>
+        </section>
+
+        <section id="pelis">
+            <h2>Películas que he visto este año</h2>
+            <div id="posts-pelis"></div>
+        </section>
+
+        <section id="admiro">
+            <h2>Personas a las que admiro</h2>
+            <div id="posts-admiro"></div>
+        </section>
+
+        <section id="diario">
+            <h2>Diario de la desesperación</h2>
+            <div id="posts-diario"></div>
+        </section>
+
+        <section id="otros">
+            <h2>Otros</h2>
+            <div id="posts-otros"></div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Puedes contactarme en: <a href="mailto:tucorreo@ejemplo.com">tucorreo@ejemplo.com</a></p>
+        </section>
     </main>
+    
+    <footer>
+        <p>&copy; 2025 - Mi Blog Personal</p>
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
