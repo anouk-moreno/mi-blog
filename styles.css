@@ -50,11 +50,11 @@ footer {
 }
 
 /* 🔹 Estil per a les files de pel·lícules amb scroll horitzontal */
-.peliculas-row {
+.pelicules-row {
     margin-bottom: 30px;
 }
 
-.peliculas-scroll {
+.pelicules-scroll {
     display: flex;
     overflow-x: auto;
     gap: 20px;
@@ -81,7 +81,7 @@ footer {
 .pelicula a {
     display: block;
     text-decoration: none;
-    color: inherit;
+    color: inherit; 
 }
 
 .pelicula:hover {
@@ -97,21 +97,21 @@ footer {
 }
 
 /* 🔹 Estil per al títol */
-.pelicula h3 {
-    margin: 10px 0;
-    font-size: 1.2em;
+.pelicula a h3 {
+    color: inherit;
+    text-decoration: none;
 }
 
 /* 🔹 Per millorar el desplaçament horitzontal */
-.peliculas-scroll::-webkit-scrollbar {
+.pelicules-scroll::-webkit-scrollbar {
     height: 8px;
 }
 
-.peliculas-scroll::-webkit-scrollbar-thumb {
+.pelicules-scroll::-webkit-scrollbar-thumb {
     background: #bbb;
     border-radius: 10px;
 }
 
-.peliculas-scroll::-webkit-scrollbar-track {
+.pelicules-scroll::-webkit-scrollbar-track {
     background: #eee;
 }
