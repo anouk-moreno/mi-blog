@@ -5,6 +5,26 @@ body {
     background-color: #f4f4f4;
 }
 
+.custom-header {
+    width: 100%;
+    height: 300px; /* Ajusta la altura según prefieras */
+    background-image: url("img/header.jpg"); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.custom-header h1 {
+    color: white;
+    font-size: 2.5em;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la visibilidad del texto */
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
 main {
     max-width: 900px;
     margin: auto;
