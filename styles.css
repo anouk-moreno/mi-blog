@@ -1,4 +1,3 @@
-/* 🔹 Estils generals */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -50,43 +49,32 @@ footer {
     bottom: 0;
 }
 
-/* 🔹 Scroll horitzontal compartit per pel·lícules i escenes */
-.scroll-container, .pelicules-scroll {
-    width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
-    padding: 10px 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+/* 🔹 Estil per a les files de pel·lícules amb scroll horitzontal */
+.pelicules-row {
+    margin-bottom: 30px;
 }
 
-/* 🔹 Contenidor d'elements amb scroll */
-.scroll-content {
+.pelicules-scroll {
     display: flex;
-    gap: 10px;
-    padding: 10px;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 10px;
     scroll-snap-type: x mandatory;
     scrollbar-width: thin;
     scrollbar-color: #bbb #eee;
 }
 
-/* 🔹 Estils per a cada element dins del scroll */
-.pelicula, .scroll-content img {
+/* 🔹 Fa que tota la pel·lícula sigui clicable */
+.pelicula {
     flex: 0 0 auto;
     width: 200px;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-    scroll-snap-align: start;
-}
-
-/* 🔹 Estils addicionals per a les pel·lícules */
-.pelicula {
     background: #fff;
     padding: 15px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    scroll-snap-align: start;
+    transition: transform 0.2s ease-in-out;
 }
 
 .pelicula a {
@@ -100,7 +88,6 @@ footer {
     pointer-events: none;
 }
 
-/* 🔹 Títols de les pel·lícules */
 .pelicula h3 {
     margin: 10px 0;
     font-size: 1.2em;
@@ -109,27 +96,57 @@ footer {
     text-decoration: none;
 }
 
-/* 🔹 Efecte hover */
-.pelicula:hover, .scroll-content img:hover {
+/* 🔹 Estil per a l'efecte hover */
+.pelicula:hover {
     transform: scale(1.05);
 }
 
-/* 🔹 Estils específics per a imatges dins del scroll */
-.scroll-content img {
-    height: 200px;
+/* 🔹 Estil per a la imatge */
+.pelicula img {
+    width: 100%;
+    height: 250px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
-/* 🔹 Personalització de la barra de desplaçament */
-.scroll-container::-webkit-scrollbar, .pelicules-scroll::-webkit-scrollbar {
+/* 🔹 Per millorar el desplaçament horitzontal */
+.pelicules-scroll::-webkit-scrollbar {
     height: 8px;
 }
 
-.scroll-container::-webkit-scrollbar-thumb, .pelicules-scroll::-webkit-scrollbar-thumb {
+.pelicules-scroll::-webkit-scrollbar-thumb {
     background: #bbb;
     border-radius: 10px;
 }
 
-.scroll-container::-webkit-scrollbar-track, .pelicules-scroll::-webkit-scrollbar-track {
+.pelicules-scroll::-webkit-scrollbar-track {
     background: #eee;
+}
+
+.scroll-container {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Contenedor de las imágenes */
+.scroll-content {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Estilo de las imágenes */
+.scroll-content img {
+    height: 200px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.scroll-content img:hover {
+    transform: scale(1.05);
 }
