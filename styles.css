@@ -150,3 +150,50 @@ footer {
 .scroll-content img:hover {
     transform: scale(1.05);
 }
+
+/* 🔹 Contenidor del scroll per a les escenes */
+.escenes-scroll-container {
+    width: 100%;
+    overflow-x: auto; /* Activa el desplaçament horitzontal */
+    white-space: nowrap; /* Evita que les imatges es col·loquin en columnes */
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-start; /* Les imatges s’alineen correctament */
+}
+
+/* 🔹 Contenidor de les imatges */
+.escenes-scroll-content {
+    display: flex;
+    gap: 10px; /* Espai entre imatges */
+    padding: 10px;
+    scroll-snap-type: x mandatory; /* Suavitza el desplaçament */
+}
+
+/* 🔹 Estil de les imatges dins del scroll */
+.escenes-scroll-content img {
+    height: 200px; /* Ajusta la mida segons el que necessitis */
+    width: auto; /* Manté la proporció original */
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    flex-shrink: 0; /* Evita que es redueixin les imatges */
+}
+
+/* 🔹 Efecte hover */
+.escenes-scroll-content img:hover {
+    transform: scale(1.05);
+}
+
+/* 🔹 Personalització de la barra de desplaçament */
+.escenes-scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.escenes-scroll-container::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 10px;
+}
+
+.escenes-scroll-container::-webkit-scrollbar-track {
+    background: #eee;
+}
